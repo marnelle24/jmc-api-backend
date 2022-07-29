@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('transaction_id');
             $table->bigInteger('product_id');
-            $table->float('price', 8, 2);
-            $table->float('discount', 8, 2);
+            $table->float('price', 8, 2)->default(0);
+            $table->float('discount', 8, 2)->default(0);
             $table->timestamps();
         });
     }
